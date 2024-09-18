@@ -21,8 +21,8 @@ def get_gemini_response(question):
     return response
 
 # Initialize Streamlit app
-st.set_page_config(page_title="Q&A Demo")
-st.header("KISAN Gemini LLM Application")
+st.set_page_config(page_title="Smart Farming")
+st.header("Price Prediction of Crops")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
@@ -49,7 +49,7 @@ if submit and input_text:
         st.error(f"An error occurred: {e}")
 
 # Display the chat history
-st.subheader("The Chat History is")
+st.subheader("Previous farmers questions")
 for role, text in st.session_state['chat_history']:
     st.write(f"{role}: {text}")
 
